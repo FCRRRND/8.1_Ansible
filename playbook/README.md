@@ -34,4 +34,14 @@
 
 9. Какой параметр из модуля подключения `ssh` необходим для того, чтобы определить пользователя, под которым необходимо совершать подключение?
 
-   
+   - remote_user
+     set_via:
+          env:
+          - name: ANSIBLE_REMOTE_USER
+          ini:
+          - key: remote_user
+            section: defaults
+          vars:
+          - name: ansible_user
+          - name: ansible_ssh_user
+
